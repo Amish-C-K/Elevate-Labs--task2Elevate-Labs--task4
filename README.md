@@ -52,16 +52,88 @@ sudo ufw delete deny 23
 
 ![setup](https://github.com/Amish-C-K/)
 
+---
+# Setup and Use a Firewall on Windows
+
+## 🎯 Objective
+Configure and test basic firewall rules to allow or block traffic using **Windows Defender Firewall**.
+
+---
+
+## 🧰 Tools Used
+- Windows 10/11
+- Windows Defender Firewall with Advanced Security
+- Telnet Client (optional)
+- Command Prompt (Admin)
+
+---
+
+## 🛠️ Step-by-Step Process
+
+### ✅ 1. Open Firewall Management Console
+- Press `Win + R`, type `wf.msc`, press **Enter**
+
+![setup](https://github.com/Amish-C-K/)
+
+### ✅ 2. Block Port 23 (Telnet)
+1. In the right-hand pane, click **New Rule**
+2. Select **Port** → Click **Next**
+3. Choose **TCP** and enter port `23` → **Next**
+4. Select **Block the connection** → **Next**
+5. Apply to all profiles (Domain, Private, Public) → **Next**
+6. Name the rule: `Block Telnet Port 23` → Click **Finish**
+
+![setup](https://github.com/Amish-C-K/)
+
+### ✅ 3. Install and Use Telnet to Test Block
+
+#### 🔹 Install Telnet via DISM:
+Open Command Prompt as Administrator:
+```cmd
+dism /online /Enable-Feature /FeatureName:TelnetClient
+```
+
+### 🔹 Test Port 23:
+```bash
+telnet localhost 23
+```
+
+![setup](https://github.com/Amish-C-K/)
+
+### ✅ 4. Allow SSH Port (22)
+1. Open New Rule again
+2. Select Port → Next
+3. Choose TCP, enter port 22 → Next
+4. Select Allow the connection → Next
+5. Apply to all profiles → Next
+6. Name it: Allow SSH Port 22 → Finish
+
+![setup](https://github.com/Amish-C-K/)
+
+
+### ✅ 5. Remove the Telnet Block Rule
+- Go to Inbound Rules
+- Right-click on Block Telnet Port 23 → Delete
+
 ## 🧠 Summary
 UFW (Uncomplicated Firewall) is a user-friendly frontend for iptables. In this task:
 
--We enabled the firewall.
--Added a rule to block Telnet traffic (port 23).
--Verified the block using telnet and nmap.
--Allowed SSH traffic (port 22) to ensure secure remote access.
--Finally, cleaned up by removing the test rule.
+- We enabled the firewall.
+- Added a rule to block Telnet traffic (port 23).
+- Verified the block using telnet and nmap.
+- Allowed SSH traffic (port 22) to ensure secure remote access.
+- Finally, cleaned up by removing the test rule.
 
 > This task demonstrated the basic skills required to manage firewall rules and understand how traffic filtering protects the system.
+
+Windows Defender Firewall allows administrators to define traffic rules for enhanced security. In this task:
+
+- We blocked port 23 to prevent Telnet access (a known insecure protocol).
+- We allowed port 22 for secure SSH communication.
+- We validated blocking via Telnet.
+- Finally, we removed the test rule to return to the original state.
+
+> This task demonstrates how basic firewall rules can protect a system by filtering unwanted or risky traffic.
 
 ## ✅ Outcome
 ✔️ Basic UFW management skills
