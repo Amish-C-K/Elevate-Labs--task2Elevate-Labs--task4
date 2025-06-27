@@ -141,3 +141,5 @@ Windows Defender Firewall allows administrators to define traffic rules for enha
 ✔️ Basic UFW management skills
 ✔️ Understanding of port-based traffic filtering
 ✔️ Hands-on testing with telnet and nmap
+✔️ Configured inbound rules
+✔️ Cleaned up rules properly
