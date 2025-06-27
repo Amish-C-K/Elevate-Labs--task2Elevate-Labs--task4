@@ -73,7 +73,7 @@ Configure and test basic firewall rules to allow or block traffic using **Window
 ### ✅ 1. Open Firewall Management Console
 - Press `Win + R`, type `wf.msc`, press **Enter**
 
-![setup](https://github.com/Amish-C-K/)
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-4.png)
 
 ### ✅ 2. Block Port 23 (Telnet)
 1. In the right-hand pane, click **New Rule**
@@ -83,7 +83,7 @@ Configure and test basic firewall rules to allow or block traffic using **Window
 5. Apply to all profiles (Domain, Private, Public) → **Next**
 6. Name the rule: `Block Telnet Port 23` → Click **Finish**
 
-![setup](https://github.com/Amish-C-K/)
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-6.png)
 
 ### ✅ 3. Install and Use Telnet to Test Block
 
@@ -98,7 +98,7 @@ dism /online /Enable-Feature /FeatureName:TelnetClient
 telnet localhost 23
 ```
 
-![setup](https://github.com/Amish-C-K/)
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-7.png)
 
 ### ✅ 4. Allow SSH Port (22)
 1. Open New Rule again
@@ -108,12 +108,14 @@ telnet localhost 23
 5. Apply to all profiles → Next
 6. Name it: Allow SSH Port 22 → Finish
 
-![setup](https://github.com/Amish-C-K/)
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-8.png)
 
 
 ### ✅ 5. Remove the Telnet Block Rule
 - Go to Inbound Rules
 - Right-click on Block Telnet Port 23 → Delete
+
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-10.png)
 
 ## 🧠 Summary
 UFW (Uncomplicated Firewall) is a user-friendly frontend for iptables. In this task:
