@@ -34,7 +34,7 @@ sudo ufw deny 23
 sudo ufw status numbered
 ```
 
-![setup](https://github.com/Amish-C-K/)
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-1.png)
 
 ### 🔹 4. Test Rule Using Telnet and Nmap
 ```bash
@@ -42,7 +42,7 @@ telnet localhost 23
 nmap -p 23 localhost
 ```
 
-![setup](https://github.com/Amish-C-K/)
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-2.png)
 
 ### 🔹 5. Allow SSH (Port 22) and Remove the Block Rule for Port 23
 ```bash
@@ -50,7 +50,7 @@ sudo ufw allow 22
 sudo ufw delete deny 23
 ```
 
-![setup](https://github.com/Amish-C-K/)
+![setup](https://github.com/Amish-C-K/Elevate-Labs--task4/blob/main/images/t4-3.png)
 
 ---
 # Setup and Use a Firewall on Windows
